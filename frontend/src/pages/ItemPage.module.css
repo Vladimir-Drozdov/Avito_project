@@ -1,0 +1,13 @@
+@media (min-width: 1400px) {
+  .itemPageContainer {
+    font-size: 20px;
+  }
+}
+@media (min-width: 2000px) {
+  .itemPageContainer {
+    font-size: 24px;
+  }
+}
+.itemPageContainer button {
+  font-size: inherit; 
+}
