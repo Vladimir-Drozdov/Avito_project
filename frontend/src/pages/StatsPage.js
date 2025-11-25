@@ -16,10 +16,10 @@ function StatsPage() {
     async function loadStats() {
       try {
         const [summary, activity, decisions, categories] = await Promise.all([
-          axios.get("/api/v1/stats/summary"),
-          axios.get("/api/v1/stats/chart/activity"),
-          axios.get("/api/v1/stats/chart/decisions"),
-          axios.get("/api/v1/stats/chart/categories"),
+          axios.get("http://localhost:3001/api/v1/stats/summary"),
+          axios.get("http://localhost:3001/api/v1/stats/chart/activity"),
+          axios.get("http://localhost:3001/api/v1/stats/chart/decisions"),
+          axios.get("http://localhost:3001/api/v1/stats/chart/categories"),
         ]);
 
         setMetrics(summary.data);

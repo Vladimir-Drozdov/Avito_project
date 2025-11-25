@@ -18,7 +18,7 @@ function ItemPage() {
   useEffect(() => {
     const fetchAd = async () => {
       try {
-        const response = await axios.get(`/api/v1/ads/${id}`);
+        const response = await axios.get(`http://localhost:3001/api/v1/ads/${id}`);
         setAd(response.data);
       } catch (error) {
         console.error(error);
@@ -29,7 +29,7 @@ function ItemPage() {
     fetchAd();
   }, [id]);
 
-  const API_BASE = "/api/v1";
+  const API_BASE = "http://localhost:3001/api/v1";
 
   const approveItem = async (id) => {
     await fetch(`${API_BASE}/ads/${id}/approve`, { method: "POST" });

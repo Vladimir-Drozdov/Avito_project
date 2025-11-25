@@ -9,6 +9,7 @@ function ModerationHistory({ history }) {
             <br />
             {new Date(item.timestamp).toLocaleString()}
             {item.comment && <p>Комментарий: {item.comment}</p>}
+            {item.comment && <p> Причина: {item.reason}</p>}
             </li>
         ))}
     </ul>

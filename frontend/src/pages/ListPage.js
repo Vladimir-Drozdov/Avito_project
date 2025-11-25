@@ -22,7 +22,7 @@ function ListPage() {
   useEffect(() => {
     const fetchAds = async () => {
       try {
-        const response = await axios.get("/api/v1/ads", {
+        const response = await axios.get("http://localhost:3001/api/v1/ads", {
           params: filters,
         });
         setAds(response.data.ads);
