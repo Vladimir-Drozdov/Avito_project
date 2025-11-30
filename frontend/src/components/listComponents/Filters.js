@@ -8,7 +8,7 @@ function Filters({ filters, setFilters }) {
   useEffect(() => {
     const fetchFilterOptions = async () => {
       try {
-        const res = await axios.get("/api/v1/ads");
+        const res = await axios.get("http://localhost:3001/api/v1/ads");
         const ads = res.data.ads || [];
         const statuses = [...new Set(ads.map(ad => ad.status))];
         setStatusOptions(statuses);
